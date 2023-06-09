@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 // import PropTypes from 'prop-types'
 export class Navebar extends Component {
-  // static defaultProps = {
-  //   color : 'white',
-  //   backgroundColor : 'black'
-  // }
-  // static PropType = {
-  //   color : PropTypes.string,
-  //   backgroundColor : PropTypes.string,
-  // }
+  
   
   render() {
     
@@ -17,10 +11,10 @@ export class Navebar extends Component {
         <nav
           className={`navbar navbar-expand-lg navbar-${this.props.mode} bg-${this.props.mode}`} 
         >
-          <div className="container-fluid" style={{color: this.props.mode===`light`?'black ':'white'}}>
-            <a className="navbar-brand" href="/">
+          <div className="container-fluid" style={{color: this.props.mode===`light`?'black ':'white',height:'60px',fontSize:'20px'}}>
+            <Link style={{fontSize:'30px'}} className="navbar-brand" to="/">
               NewsMonkey
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -28,45 +22,45 @@ export class Navebar extends Component {
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
-              aria-label="Toggle navigation"
+              aria-label="toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="/">
+                  <Link className="nav-link" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/business">
+                  <Link className="nav-link" to="/business">
                     Business
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/entertainment">
+                  <Link className="nav-link" to="/entertainment">
                     Entertainment
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/health">
+                  <Link className="nav-link" to="/health">
                     Health
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link"
-                    href="/science">Science</a>
+                  <Link className="nav-link"
+                    to="/science">Science</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/sports">
+                  <Link className="nav-link" to="/sports">
                     Sports
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/technology">
+                  <Link className="nav-link" to="/technology">
                     Technology
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <div className="form-check form-switch " style={{color: this.props.mode===`light`?'black ':'white'}}>
