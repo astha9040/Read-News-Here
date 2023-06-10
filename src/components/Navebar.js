@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import PropTypes from 'prop-types'
 export class Navebar extends Component {
-  
-  
+
+
   render() {
-    
+
     return (
       <div>
         <nav
-          className={`navbar navbar-expand-lg navbar-${this.props.mode} bg-${this.props.mode}`} 
+          className={`navbar fixed-top navbar-expand-lg navbar-${this.props.mode} bg-${this.props.mode}`}  
         >
-          <div className="container-fluid" style={{color: this.props.mode===`light`?'black ':'white',height:'60px',fontSize:'20px'}}>
-            <Link style={{fontSize:'30px'}} className="navbar-brand" to="/">
-              NewsMonkey
+          <div className="container-fluid" style={{color: this.props.mode === `light` ? 'black ' : 'white'}}>
+            <Link  className="navbar-brand" to="/">
+              NewsTime
             </Link>
             <button
               className="navbar-toggler"
@@ -26,7 +26,7 @@ export class Navebar extends Component {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse" id="navbarSupportedContent" >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" aria-current="page" to="/">
@@ -63,7 +63,7 @@ export class Navebar extends Component {
                   </Link>
                 </li>
               </ul>
-              <div className="form-check form-switch " style={{color: this.props.mode===`light`?'black ':'white'}}>
+              <div className="form-check form-switch " style={{ color: this.props.mode === `light` ? 'black ' : 'white' }}>
                 <input
                   className="form-check-input"
                   type="checkbox"
@@ -71,7 +71,7 @@ export class Navebar extends Component {
                   id="flexSwitchCheckDefault"
                   onClick={this.props.toggleMode}
                 />
-                <label className="form-check-label"  htmlFor="flexSwitchCheckDefault">
+                <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
                   {this.props.mode === 'dark' ? ' Disable dark Mode' : 'Enable Dark Mode'}
                 </label>
               </div>
