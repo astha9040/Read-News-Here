@@ -30,7 +30,7 @@ export class News extends Component {
 
       totalResults: 0
     }
-    document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsMonkey`
+    document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsTime`
   }
 
   // -----------------------------------------updating data-------------------------=--//
