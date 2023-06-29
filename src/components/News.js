@@ -8,12 +8,12 @@ import InfiniteScroll from "react-infinite-scroll-component";
 export class News extends Component {
   static defaultProps = {
     country: 'in',
-    pagesize: 8,
+    // pagesize: 8,
     category: 'general'
   }
   static PropType = {
     country: PropTypes.string,
-    pagesize: PropTypes.number,
+    // pagesize: PropTypes.number,
     category: PropTypes.string,
   }
   capitalizeFirstLetter(string) {
